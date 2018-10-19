@@ -1,0 +1,10 @@
+Time is the most important thing in our physical life. Time is the fourth dimension in our world. We have a lot of things to do with time in software industry as well.
+
+Because of time's uniqueness, we often use time as key. However we need to be careful in this case.
+	1. Time in the system has its own precision. You need to consider the time precision requirement of your software. For example, if you use java.util.Date to get the string of current time, you may only get seconds level precision, which will leads to error when two different operations happen within one second. The latter one will override the previous one because their time in Date are same. In this case, the time is better to be persisted as timestamp. System.currentTimeMillis(). Or in other words, time is different from date.
+
+	2. Time in the system has different presentation. Different time zones have different time presentation. Different calendars have different time. Mostly common used are Gregorian calendar. As far, there are many java libraries for time, such as java.util.Date, java.util.Calendar, SimpleFormat, Joda time library and so on. There are also protocols to consolidate the time presentation in Internet, so we can have a consistent, easy and efficient communication based on this kind of agreement. rtf3339 is the one in this case.
+
+	3. Time can be modeled in many ways. Technical speaking, time is continuous. When we use year, month, day, hour, minute and second, we are discretizing it. We can aggregate time based events in different levels. For example, we can divide one hour by 1, 5, 10, 15, 60. In such case, we get different buckets with different size. We aggregrate events into these buckets.
+
+Time is a broad topic, will continue once I get more experience on it.
