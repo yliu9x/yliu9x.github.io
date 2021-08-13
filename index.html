@@ -13,14 +13,17 @@
         padding: 16px;
         text-decoration: none;
       }
-      div {
+      div:not(div#timeGadget) {
         height: 100%;
         border: 1px solid powderblue;
         margin: 25px;
         float: left;
       }
+      div#timeGadget {
+      }
     </style>
   </head>
+
   <body>
   <h1>This is my blog at the first time -- random stuff</h1>
   <pre>
@@ -45,6 +48,15 @@ Game Engine: Cocos2d-x, Corona
 
   <div id="navigatorColumn" style="width: 20%"></div>
   <div id="contentColumn" style="width: 50%"></div>
-  <div id="gadgetColumn" style="width: 20%"></div>
+  <div id="gadgetColumn" style="width: 20%">
+    <div id="timeGadget"></div>
+  </div>
+
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+  <script src="time_gadget.js"></script>
+
   </body>
 </html>
