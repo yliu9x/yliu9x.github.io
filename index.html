@@ -1,12 +1,12 @@
 <html>
   <head>
     <style>
-      ul{
-        overflow: hidden;
-      }
-      li {
-        float: left;
-      }
+      /*ul{*/
+      /*  overflow: hidden;*/
+      /*}*/
+      /*li {*/
+      /*  float: left;*/
+      /*}*/
       li a {
         display: block;
         text-align: center;
@@ -15,8 +15,8 @@
       }
       div:not(div#timeGadget) {
         height: 100%;
-        border: 1px solid powderblue;
-        margin: 25px;
+        /*border: 1px solid powderblue;*/
+        margin-left: 25px;
         float: left;
       }
       div#timeGadget {
@@ -25,9 +25,23 @@
   </head>
 
   <body>
-  <h1>This is my blog at the first time -- random stuff</h1>
-  <pre>
-Gained experience from projects such as operating system kernel implementation, socket programming, web development, sophisticated computer graphics algorithm implementation and practical application development. Now is diving deep in real-world problems in computing industry.
+
+  <div id="navigatorColumn" style="width: 20%">
+    <h2 style="text-align: center">Content</h2>
+    <ul>
+      <li><a>Me</a><br/></li>
+      <li><a href="kt.html">My Knowledge Tree</a><br/></li>
+      <li><a>Blogs</a><br/></li>
+      <li><a>Hobbies</a><br/></li>
+      <li><a>Book list</a><br/></li>
+    </ul>
+  </div>
+  <div id="contentColumn" style="width: 50%">
+    <h1>This is my blog at the first time -- random stuff</h1>
+    <pre>
+Gained experience from projects such as operating system kernel implementation, socket programming, web development,
+sophisticated computer graphics algorithm implementation and practical application development.
+Now is diving deep in real-world problems in computing industry.
 
 TECHNICAL SKILLS:
 Programming Languages: Java, C, Python, Go, Lua, PHP, JavaScript, Assembly Language(x86)
@@ -36,18 +50,8 @@ Java Framework: Retrofit, Spring
 Analysis Tools: Wireshark, Volatility, OllyDbg, IDA
 Game Engine: Cocos2d-x, Corona
   </pre>
-  <h2>Content</h2>
-  <ul>
-    <li><a>Me</a></li>
-    <li><a href="kt.html">My Knowledge Tree</a></li>
-  </ul><br>
-  <p>The comparison of procedural(functional) programming and object-oriented programming using the example of my c program written in my first year course class, the student information management system</p>
-  <h2>Table</h2>
-  <a href="time.html">Time</a><br>
-  <a href="internetProtocols.html">IP/TCP</a>
 
-  <div id="navigatorColumn" style="width: 20%"></div>
-  <div id="contentColumn" style="width: 50%"></div>
+  </div>
   <div id="gadgetColumn" style="width: 20%">
     <div id="timeGadget"></div>
   </div>
