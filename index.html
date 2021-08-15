@@ -7,7 +7,7 @@
       /*li {*/
       /*  float: left;*/
       /*}*/
-      li a {
+      div#navigatorColumn li {
         display: block;
         text-align: center;
         padding: 16px;
@@ -22,6 +22,25 @@
       div#timeGadget {
       }
     </style>
+
+    <script>
+      function display(id) {
+        switch (id) {
+          case "1":
+            const bio = document.getElementById("bio");
+            bio.setAttribute("display", "block");
+            break;
+          case "2":
+            const hob = document.getElementById("hobbies");
+            hob.setAttribute("display", "block");
+            break;
+          case "3":
+            const bl = document.getElementById("bookList");
+            bl.setAttribute("display", "block");
+            break;
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -29,20 +48,20 @@
   <div id="navigatorColumn" style="width: 20%">
     <h2 style="text-align: center">Content</h2>
     <ul>
-      <li><a>Me</a><br/></li>
-      <li><a href="kt.html">My Knowledge Tree</a><br/></li>
-      <li><a>Blogs</a><br/></li>
-      <li><a>Hobbies</a><br/></li>
-      <li><a>Book list</a><br/></li>
-      <li><a>Links</a><br/>
-        <ul>
-          <li><a href="https://yliu9x.gitbook.io/workspace/">Gitbook</a></li>
-        </ul>
+      <li><div id="1" onClick="display(1)">Me</div><br/></li>
+      <li><div id="2" onClick="display(2)">My Knowledge Tree</div><br/></li>
+      <li><div id="3" onClick="display(3)">Blogs</div><br/></li>
+      <li><div id="4" onClick="display(4)">Hobbies</div><br/></li>
+      <li><div id="5" onClick="display(5)">Book list</div><br/></li>
+      <li>Links<br/>
+        <a href="https://www.linkedin.com/in/yuao-liu-bb47a5116/">Linkedin</a>
+        <a href="https://yliu9x.gitbook.io/workspace/">Gitbook</a>
+        <a href="alex.liu.profe@gmail.com">Gmail</a>
       </li>
     </ul>
   </div>
   <div id="contentColumn" style="width: 55%">
-    <div id="bio">
+    <div id="bio" style="display :none">
       <h1>This is my blog at the first time -- random stuff</h1>
       <pre>Gained experience from projects such as operating system kernel implementation, socket programming, web development,
 sophisticated computer graphics algorithm implementation and practical application development.
@@ -56,10 +75,10 @@ Analysis Tools: Wireshark, Volatility, OllyDbg, IDA
 Game Engine: Cocos2d-x, Corona
       </pre>
     </div>
-    <div id="hobbies">
+    <div id="hobbies" style="display :none">
       <p>My hobbies include swimming, hiking</p>
     </div>
-    <div id="bookList">
+    <div id="bookList" style="display :none">
       <p>Computer science</p>
       <ol>
         <li></li>
