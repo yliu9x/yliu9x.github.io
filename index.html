@@ -13,10 +13,10 @@
         padding: 16px;
         text-decoration: none;
       }
-      div:not(div#timeGadget) {
+      body > div {
         height: 100%;
         /*border: 1px solid powderblue;*/
-        margin-left: 25px;
+        margin-left: 50px;
         float: left;
       }
       div#timeGadget {
@@ -34,12 +34,17 @@
       <li><a>Blogs</a><br/></li>
       <li><a>Hobbies</a><br/></li>
       <li><a>Book list</a><br/></li>
+      <li><a>Links</a><br/>
+        <ul>
+          <li><a href="https://yliu9x.gitbook.io/workspace/">Gitbook</a></li>
+        </ul>
+      </li>
     </ul>
   </div>
-  <div id="contentColumn" style="width: 50%">
-    <h1>This is my blog at the first time -- random stuff</h1>
-    <pre>
-Gained experience from projects such as operating system kernel implementation, socket programming, web development,
+  <div id="contentColumn" style="width: 55%">
+    <div id="bio">
+      <h1>This is my blog at the first time -- random stuff</h1>
+      <pre>Gained experience from projects such as operating system kernel implementation, socket programming, web development,
 sophisticated computer graphics algorithm implementation and practical application development.
 Now is diving deep in real-world problems in computing industry.
 
@@ -49,10 +54,21 @@ Platform/Libraries: Unix, Linux, Windows, Android, MATLAB, openCV/openGL
 Java Framework: Retrofit, Spring
 Analysis Tools: Wireshark, Volatility, OllyDbg, IDA
 Game Engine: Cocos2d-x, Corona
-  </pre>
-
+      </pre>
+    </div>
+    <div id="hobbies">
+      <p>My hobbies include swimming, hiking</p>
+    </div>
+    <div id="bookList">
+      <p>Computer science</p>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </div>
   </div>
-  <div id="gadgetColumn" style="width: 20%">
+  <div id="gadgetColumn" style="width: 15%">
     <div id="timeGadget"></div>
   </div>
 
