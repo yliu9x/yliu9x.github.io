@@ -25,10 +25,14 @@
 
     <script>
       function reset() {
-        const bio = document.getElementById("contentColumn");
+        const contentDiv = document.getElementById("contentColumn");
+        for (let i = 0; i < contentDiv.children.length; i++) {
+          contentDiv.children[i].setAttribute("style", "display :none");
+        }
       }
 
       function display(id) {
+        reset();
         console.log("navigator choose: " + id);
         switch (id) {
           case "1":
