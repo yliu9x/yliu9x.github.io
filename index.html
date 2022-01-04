@@ -1,33 +1,83 @@
 <html>
   <head>
     <style>
-      ul{
-        overflow: hidden;
-      }
-      li {
-        float: left;
-      }
-      li a {
+      /*ul{*/
+      /*  overflow: hidden;*/
+      /*}*/
+      /*li {*/
+      /*  float: left;*/
+      /*}*/
+      div#navigatorColumn li {
         display: block;
         text-align: center;
         padding: 16px;
         text-decoration: none;
       }
-      div:not(div#timeGadget) {
+      body > div {
         height: 100%;
-        border: 1px solid powderblue;
-        margin: 25px;
+        /*border: 1px solid powderblue;*/
+        margin-left: 50px;
         float: left;
       }
       div#timeGadget {
       }
     </style>
+
+    <script>
+      function reset() {
+        const contentDiv = document.getElementById("contentColumn");
+        for (let i = 0; i < contentDiv.children.length; i++) {
+          contentDiv.children[i].setAttribute("style", "display :none");
+        }
+      }
+
+      function display(id) {
+        reset();
+        console.log("navigator choose: " + id);
+        switch (id) {
+          case "1":
+            console.log("navigator choose: bio");
+            const bio = document.getElementById("bio");
+            bio.setAttribute("style", "display :block");
+            break;
+          case "2":
+            console.log("navigator choose: hobbies");
+            const hob = document.getElementById("hobbies");
+            hob.setAttribute("style", "display :block");
+            break;
+          case "3":
+            console.log("navigator choose: booklist");
+            const bl = document.getElementById("bookList");
+            bl.setAttribute("style", "display :block");
+            break;
+        }
+      }
+    </script>
   </head>
 
   <body>
-  <h1>This is my blog at the first time -- random stuff</h1>
-  <pre>
-Gained experience from projects such as operating system kernel implementation, socket programming, web development, sophisticated computer graphics algorithm implementation and practical application development. Now is diving deep in real-world problems in computing industry.
+
+  <div id="navigatorColumn" style="width: 20%">
+    <h2 style="text-align: center">Content</h2>
+    <ul>
+      <li><div id="1" onClick="display('1')">Me</div><br/></li>
+      <li><div id="2" onClick="display('2')">My Knowledge Tree</div><br/></li>
+      <li><div id="3" onClick="display('3')">Blogs</div><br/></li>
+      <li><div id="4" onClick="display('4')">Hobbies</div><br/></li>
+      <li><div id="5" onClick="display('5')">Book list</div><br/></li>
+      <li>Links<br/>
+        <a href="https://www.linkedin.com/in/yuao-liu-bb47a5116/">Linkedin</a>
+        <a href="https://yliu9x.gitbook.io/workspace/">Gitbook</a>
+        <a href="alex.liu.profe@gmail.com">Gmail</a>
+      </li>
+    </ul>
+  </div>
+  <div id="contentColumn" style="width: 55%">
+    <div id="bio" style="display :none">
+      <h1>This is my blog at the first time -- random stuff</h1>
+      <pre>Gained experience from projects such as operating system kernel implementation, socket programming, web development,
+sophisticated computer graphics algorithm implementation and practical application development.
+Now is diving deep in real-world problems in computing industry.
 
 TECHNICAL SKILLS:
 Programming Languages: Java, C, Python, Go, Lua, PHP, JavaScript, Assembly Language(x86)
@@ -35,20 +85,21 @@ Platform/Libraries: Unix, Linux, Windows, Android, MATLAB, openCV/openGL
 Java Framework: Retrofit, Spring
 Analysis Tools: Wireshark, Volatility, OllyDbg, IDA
 Game Engine: Cocos2d-x, Corona
-  </pre>
-  <h2>Content</h2>
-  <ul>
-    <li><a>Me</a></li>
-    <li><a href="kt.html">My Knowledge Tree</a></li>
-  </ul><br>
-  <p>The comparison of procedural(functional) programming and object-oriented programming using the example of my c program written in my first year course class, the student information management system</p>
-  <h2>Table</h2>
-  <a href="time.html">Time</a><br>
-  <a href="internetProtocols.html">IP/TCP</a>
-
-  <div id="navigatorColumn" style="width: 20%"></div>
-  <div id="contentColumn" style="width: 50%"></div>
-  <div id="gadgetColumn" style="width: 20%">
+      </pre>
+    </div>
+    <div id="hobbies" style="display :none">
+      <p>My hobbies include swimming, hiking</p>
+    </div>
+    <div id="bookList" style="display :none">
+      <p>Computer science</p>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </div>
+  </div>
+  <div id="gadgetColumn" style="width: 15%">
     <div id="timeGadget"></div>
   </div>
 
