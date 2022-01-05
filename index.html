@@ -41,11 +41,21 @@
             bio.setAttribute("style", "display :block");
             break;
           case "2":
-            console.log("navigator choose: hobbies");
-            const hob = document.getElementById("hobbies");
-            hob.setAttribute("style", "display :block");
+            console.log("navigator choose: kt");
+            const kt = document.getElementById("kt");
+            kt.setAttribute("style", "display :block");
             break;
           case "3":
+            console.log("navigator choose: blogs");
+            const blgs = document.getElementById("blogs");
+            blgs.setAttribute("style", "display :block");
+            break;
+          case "4":
+            console.log("navigator choose: hobbies");
+            const hb = document.getElementById("hobbies");
+            hb.setAttribute("style", "display :block");
+            break;
+          case "5":
             console.log("navigator choose: booklist");
             const bl = document.getElementById("bookList");
             bl.setAttribute("style", "display :block");
@@ -73,8 +83,8 @@
     </ul>
   </div>
   <div id="contentColumn" style="width: 55%">
-    <div id="bio" style="display :none">
-      <h1>This is my blog at the first time -- random stuff</h1>
+    <div id="bio" style="display :block">
+      <h1>Hello there, welcome to my personal page.</h1>
       <pre>Gained experience from projects such as operating system kernel implementation, socket programming, web development,
 sophisticated computer graphics algorithm implementation and practical application development.
 Now is diving deep in real-world problems in computing industry.
@@ -87,8 +97,23 @@ Analysis Tools: Wireshark, Volatility, OllyDbg, IDA
 Game Engine: Cocos2d-x, Corona
       </pre>
     </div>
+    <div id="kt" style="display :none">
+      <a href="kt.html">Here</a>
+    </div>
+    <div id="blogs" style="display :none">
+      <div style="border-style: dashed"><p>This is my blog at the first time -- random stuff</p></div>
+      <div style="border-style: dashed"><p>This is my second blog</p></div>
+    </div>
     <div id="hobbies" style="display :none">
-      <p>My hobbies include swimming, hiking</p>
+      <p>My hobbies include </p>
+      hobbies
+      <ul>
+        <li>Arts: Music, Photography, Reading, </li>
+        <li>Sports: Swimming, hiking, fitness</li>
+        <li> </li>
+        <li> </li>
+        <li> </li>
+      </ul>
     </div>
     <div id="bookList" style="display :none">
       <p>Computer science</p>
